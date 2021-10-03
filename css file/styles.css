@@ -8,7 +8,41 @@ body {
 	background-color: blue;
 }
 .container {
-	max-width: 1200px;
+	max-width: 700px;
 	width: 100%;
 	margin:  0 auto;
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	grid-auto-rows: 100px;
+	/*grid-template-columns: 1fr;	*/
+	grid-template-areas: 
+	'MasonryI Responsive Overlap Overlap'
+	'MasonryI Fluid Explicity-placed Negative-space'
+	'Felxible-Breadth MasonryII Explicity-placed MasonryIII'
+	'DOM-Oder MasonryII Named-Tracks Named-Tracks';
+}
+.box {
+	background-color: white;
+/*	font-size: 20px;
+*/	color: blue;
+	justify-content: center;
+	text-align: center;
+    align-items: center;
+    display: flex;
+}
+.item-1 {
+	grid-row: span 2;
+}
+.item-3 {
+	grid-column: span 2;
+}
+.item-5 {
+	grid-row: span 2;
+}
+.item-8 {
+	grid-row: span 2;
+}
+.item-11 {
+	grid-column: span 2;
 }
